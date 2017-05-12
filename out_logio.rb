@@ -1,5 +1,6 @@
 # From https://github.com/black-roland/fluent-plugin-logio/blob/fddb71a71d4d1b93d6202ab0db3ee71fabf91650/lib/fluent/plugin/out_logio.rb
 # The MIT License (MIT) Copyright (c) 2016 Black Roland (https://github.com/black-roland)
+# The MIT License (MIT) Copyright (c) 2017 Volt Grid Pty Ltd
 
 require 'fluent/output'
 require 'socket'
