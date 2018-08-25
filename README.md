@@ -2,8 +2,8 @@
 
 Panubo's customised fluentd Docker images.
 
-[alpine](alpine/README.md) - Based on official optimised Alpine image.
-[debian](debian/README.md) - Debian base for Systemd support.
+- [alpine](alpine/README.md) - Based on official optimised Alpine image.
+- [debian](debian/README.md) - Debian base for Systemd support.
 
 ## License
 
