@@ -16,4 +16,4 @@ COPY entrypoint.sh /bin/
 
 COPY fluent.conf /fluentd/etc/
 
-ENV BUILD_VERSION 1.2.5-1-debian
+ENV BUILD_VERSION 1.2.5-2-debian

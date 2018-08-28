@@ -12,3 +12,4 @@ These environment configs will work with the sample configs:
 - `SUMOLOGIC_ENDPOINT` - collector endpoint url, or specify `SUMOLOGIC_COLLECTOR_HOSTNAME` and `SUMOLOGIC_URL_TOKEN`
 - `SUMOLOGIC_SOURCE_CATEGORY`
 - `SYSTEMD_READ_FROM_HEAD` - default `true`
+- `SYSTEMD_MATCHES` - allow setting systemd [matches](https://github.com/reevoo/fluent-plugin-systemd/blob/master/docs/matching.md)

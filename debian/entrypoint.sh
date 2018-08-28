@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Override official entrypoint to allow setting fluent group
 
@@ -21,5 +21,6 @@ usermod -a -G systemd-journal fluent
 
 # Systemd config defaults
 [ -z "${SYSTEMD_READ_FROM_HEAD}" ] && export SYSTEMD_READ_FROM_HEAD='true'
+[ -z "${SYSTEMD_MATCHES}" ] && export SYSTEMD_MATCHES='[]'
 
 exec gosu fluent "$@"
