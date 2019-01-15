@@ -33,7 +33,7 @@ git-release: ## Creates git tag for release
 	git push --tags
 
 docker-release: ## Builds and pushes docker image
-	git checkout tags/$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(VERSION_REV)
+	git checkout tags/$(VERSION)
 	docker build -t $(NAME):$(VERSION) .
 	docker tag $(NAME):$(VERSION) docker.io/$(NAME):$(VERSION)
 	docker tag $(NAME):$(VERSION) docker.io/$(NAME):$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(ALTERNATE)
