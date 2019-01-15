@@ -2,14 +2,10 @@
 
 This includes the following plugins:
 
-- [Sumologic](https://github.com/SumoLogic/fluentd-output-sumologic)
 - [Systemd](https://github.com/reevoo/fluent-plugin-systemd)
+- [Amazon S3](https://github.com/fluent/fluent-plugin-s3)
+- [CloudWatch Logs](https://github.com/fluent-plugins-nursery/fluent-plugin-cloudwatch-logs)
 
-## Environment Config
+## Systemd
 
-These environment configs will work with the sample configs:
-
-- `SUMOLOGIC_ENDPOINT` - collector endpoint url, or specify `SUMOLOGIC_COLLECTOR_HOSTNAME` and `SUMOLOGIC_URL_TOKEN`
-- `SUMOLOGIC_SOURCE_CATEGORY`
-- `SYSTEMD_READ_FROM_HEAD` - default `true`
-- `SYSTEMD_MATCHES` - allow setting systemd [matches](https://github.com/reevoo/fluent-plugin-systemd/blob/master/docs/matching.md)
+Setting systemd [matches](https://github.com/reevoo/fluent-plugin-systemd/blob/master/docs/matching.md)

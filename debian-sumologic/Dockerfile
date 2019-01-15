@@ -1,19 +1,20 @@
-FROM fluent/fluentd:v1.2.5-debian
+FROM fluent/fluentd:v1.3.3-debian-1.0
 
 # Fluentd w/ Sumologic and systemd plugins
 
 # Install plugins
-RUN apt-get update \
+USER root
+RUN set -x \
+  && apt-get update \
   && apt-get -y install libsystemd0 \
   && export BUILD_DEPS='ruby-dev gcc make' \
-  && apt-get -y install ${BUILD_DEPS} \
+  && apt-get install -y --no-install-recommends ${BUILD_DEPS} \
   && fluent-gem install fluent-plugin-systemd -v 1.0.1 \
-  && fluent-gem install fluent-plugin-sumologic_output -v 1.3.0 \
+  && fluent-gem install fluent-plugin-sumologic_output -v 1.3.2 \
+  && fluent-gem sources --clear-all \
   && apt-get --purge autoremove -y ${BUILD_DEPS} \
-  && apt-get clean && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+  && apt-get clean && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/* \
+  ;
+USER fluent
 
-COPY entrypoint.sh /bin/
-
-COPY fluent.conf /fluentd/etc/
-
-ENV BUILD_VERSION 1.2.5-2-debian
+ENV BUILD_VERSION 1.3.3-debian-1.0-sumologic-1
