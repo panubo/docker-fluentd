@@ -28,7 +28,7 @@ vars:
 
 git-release: ## Creates git tag for release
 	[ "x$$(git status --porcelain 2> /dev/null)" == "x" ]
-	git tag $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(VERSION_REV)
+	git tag $(VERSION)
 	git push -u origin $(BRANCH)
 	git push --tags
 
