@@ -25,4 +25,4 @@ RUN set -x \
   ;
 USER fluent
 
-ENV BUILD_VERSION 1.3.3-debian-1.0-sumologic-3
+ENV BUILD_VERSION 1.3.3-debian-1.0-sumologic-4

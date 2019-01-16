@@ -12,4 +12,10 @@ Setting systemd [matches](https://github.com/reevoo/fluent-plugin-systemd/blob/m
 
 ## Config
 
-Mount your fluentd config files into the container at `/fluentd/etc/config.d/*.conf` for fluentd to pick them up.
+Mount your fluentd config files into the container at `/fluentd/etc/conf.d/*.conf` for fluentd to pick them up.
+
+## Example Usage
+
+```
+docker run --rm -it --name fluentd -v $(pwd)/conf.d:/fluentd/etc/conf.d:ro -v $(pwd)/data:/home/fluent -v /var/log/journal:/var/log/journal:ro --security-opt label:disable --group-add 190 --user 1000 panubo/fluentd:1.3.3-debian-1.0-sumologic-3
+```
