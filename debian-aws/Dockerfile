@@ -19,4 +19,4 @@ RUN set -x \
   ;
 USER fluent
 
-ENV BUILD_VERSION 1.3.3-debian-1.0-aws-1
+ENV BUILD_VERSION 1.3.3-debian-1.0-aws-2
