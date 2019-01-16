@@ -9,6 +9,7 @@ RUN set -x \
   && apt-get -y install libsystemd0 \
   && export BUILD_DEPS='ruby-dev gcc make' \
   && apt-get install -y --no-install-recommends ${BUILD_DEPS} \
+  && fluent-gem install fluent-plugin-record-modifier -v 1.1.0 \
   && fluent-gem install fluent-plugin-systemd -v 1.0.1 \
   && fluent-gem install fluent-plugin-cloudwatch-logs -v 0.7.1 \
   && fluent-gem install fluent-plugin-s3 -v 1.1.7 \
