@@ -9,3 +9,7 @@ This includes the following plugins:
 ## Systemd
 
 Setting systemd [matches](https://github.com/reevoo/fluent-plugin-systemd/blob/master/docs/matching.md)
+
+## Config
+
+Mount your fluentd config files into the container at `/fluentd/etc/config.d/*.conf` for fluentd to pick them up.
