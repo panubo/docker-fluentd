@@ -18,11 +18,11 @@ RUN set -x \
   && fluent-gem install fluent-plugin-prometheus -v 1.3.0 \
   && fluent-gem install oj -v 3.7.6 \
   && fluent-gem install fluent-plugin-systemd -v 1.0.1 \
-  && fluent-gem install fluent-plugin-sumologic_output -v 1.3.2 \
+  && fluent-gem install fluent-plugin-sumologic_output -v 1.4.0 \
   && fluent-gem sources --clear-all \
   && apt-get --purge autoremove -y ${BUILD_DEPS} \
   && apt-get clean && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/* \
   ;
 USER fluent
 
-ENV BUILD_VERSION 1.3.3-debian-1.0-sumologic-4
+ENV BUILD_VERSION 1.3.3-debian-1.0-sumologic-5
