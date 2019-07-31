@@ -1,6 +1,6 @@
-SUBDIRS := 1.4.1/debian-aws 1.4.1/debian-sumologic
+SUBDIRS := 1.4/*
 
-.PHONY: build push clean
+.PHONY: build push clean version
 
 build:
 	for dir in $(SUBDIRS); do \
@@ -13,6 +13,11 @@ push:
 	done
 
 clean:
+	for dir in $(SUBDIRS); do \
+		make TAG=$${dir//\//-} -C $$dir $(MAKECMDGOALS); \
+	done
+
+version:
 	for dir in $(SUBDIRS); do \
 		make TAG=$${dir//\//-} -C $$dir $(MAKECMDGOALS); \
 	done
