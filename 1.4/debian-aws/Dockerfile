@@ -18,10 +18,10 @@ RUN set -x \
   && export BUILD_DEPS='ruby-dev gcc g++ make libc-dev libffi-dev' \
   && apt-get install -y --no-install-recommends ${BUILD_DEPS} \
   && gem install bundler --version 2.0.2 \
-  && bundle config silence_root_warning true \
   && bundle install --gemfile=/fluentd/Gemfile --path=/fluentd/vendor/bundle --deployment \
   && gem sources --clear-all \
   && apt-get --purge autoremove -y ${BUILD_DEPS} \
   && apt-get clean && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/* \
+  && rm -rf /fluentd/vendor/bundle/ruby/2.6.0/cache/* /usr/local/lib/ruby/gems/2.6.0/cache/* /root/.bundle/cache/* \
   ;
 USER fluent
