@@ -1,4 +1,4 @@
-SUBDIRS := 1.4/*
+SUBDIRS := 1.7/*
 
 .PHONY: build push clean version
 
