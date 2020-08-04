@@ -1,5 +1,5 @@
 NAME                 := fluentd
-FLUENTD_VERSION      := $(shell sed -E -e '/^FROM/!d' -e 's/^FROM.*fluentd:v([0-9]\.[0-9]\.[0-9]).*/\1/' Dockerfile)
+FLUENTD_VERSION      := $(shell sed -E -e '/^FROM/!d' -e 's/^FROM.*fluentd:v([0-9]+\.[0-9]+\.[0-9]+).*/\1/' Dockerfile)
 FLUENTD_VERSION_FULL := $(shell sed -E -e '/^FROM/!d' -e 's/^FROM.*fluentd:v(.*)$$/\1/' Dockerfile)
 VERSION              := $(FLUENTD_VERSION)-$(shell basename $(shell pwd))
 VERSION_FULL         := $(FLUENTD_VERSION_FULL)-$(shell basename $(shell pwd))-$(shell date -u +%Y%m%d)

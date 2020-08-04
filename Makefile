@@ -1,4 +1,4 @@
-SUBDIRS := 1.7/*
+SUBDIRS := debian/
 
 .PHONY: build push clean version
 
