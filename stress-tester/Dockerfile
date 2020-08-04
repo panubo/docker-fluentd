@@ -1,4 +1,4 @@
-FROM fluent/fluentd:v1.3.3-debian-1.0
+FROM fluent/fluentd:v1.11.1-debian-1.0
 
 USER root
 # Install gomplate
@@ -24,4 +24,4 @@ CMD ["fluentd"]
 # Fluentd w/ Sumologic and systemd plugins
 COPY fluent.conf /fluentd/etc/fluent.conf.tmpl
 
-ENV BUILD_VERSION 1.3.3-debian-1.0-stresstest-1
+ENV BUILD_VERSION 1.11.1-debian-1.0-stresstest-1
