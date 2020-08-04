@@ -45,6 +45,8 @@ GEM
       fluentd (>= 0.14.0, < 2)
     fluent-plugin-detect-exceptions (0.0.13)
       fluentd (>= 0.10)
+    fluent-plugin-filter_where (1.0.3)
+      fluentd
     fluent-plugin-google-cloud (0.7.30)
       fluentd (= 1.6.3)
       google-api-client (= 0.30.8)
@@ -230,6 +232,7 @@ DEPENDENCIES
   fluent-plugin-cloudwatch-logs (~> 0.7.4)
   fluent-plugin-concat (~> 2.4)
   fluent-plugin-detect-exceptions (~> 0.0.12)
+  fluent-plugin-filter_where (~> 1.0)
   fluent-plugin-google-cloud (~> 0.7.12)
   fluent-plugin-kubernetes_metadata_filter (~> 2.2)
   fluent-plugin-multi-format-parser (~> 1.0)
