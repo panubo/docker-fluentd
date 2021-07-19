@@ -1,4 +1,4 @@
-FROM fluent/fluentd:v1.11.2-debian-1.0
+FROM fluent/fluentd:v1.13.2-debian-1.0
 
 COPY fluent.conf /fluentd/etc/fluent.conf
 
