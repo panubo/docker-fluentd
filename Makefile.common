@@ -11,6 +11,9 @@ build:
 	docker build --pull -t $(IMAGE_NAME):$(VERSION_FULL) .
 	docker tag $(IMAGE_NAME):$(VERSION_FULL) $(IMAGE_NAME):$(VERSION)
 
+shell:
+	docker run --rm -it --entrypoint bash $(IMAGE_NAME):$(VERSION_FULL)
+
 push:
 	docker push $(IMAGE_NAME):$(VERSION_FULL)
 	docker push $(IMAGE_NAME):$(VERSION)
