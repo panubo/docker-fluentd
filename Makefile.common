@@ -25,3 +25,10 @@ clean:
 version:
 	@echo "Image version is $(VERSION)"
 	@echo "Image full version is $(VERSION_FULL)"
+
+_ci_test:
+	true
+
+_ci_version:
+	@echo "$(VERSION)"
+	@echo "$(VERSION_FULL)"
