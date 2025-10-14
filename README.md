@@ -6,7 +6,6 @@ Panubo's customised fluentd Docker images.
 
 **Unmaintained**
 
-- [alpine](alpine/README.md) - Based on official optimised Alpine image.
 - [stress-tester](stess-tester) - Fluentd image that continuously outputs log messages for testing logging systems.
 
 ## License
