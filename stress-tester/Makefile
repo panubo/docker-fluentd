@@ -40,3 +40,6 @@ docker-release: ## Builds and pushes docker image
 	docker push docker.io/$(NAME):$(VERSION)
 	docker push docker.io/$(NAME):$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(ALTERNATE)
 	git checkout $(BRANCH)
+
+_ci_test: ## NOOP CI entrypoint
+	true
