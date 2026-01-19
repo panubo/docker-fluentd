@@ -1,5 +1,7 @@
 # Docker images for Fluentd
+
 [![build and push on main](https://github.com/panubo/docker-fluentd/actions/workflows/multi-build-push.yml/badge.svg)](https://github.com/panubo/docker-fluentd/actions/workflows/multi-build-push.yml)
+[![license](https://img.shields.io/github/license/panubo/docker-fluentd)](LICENSE)
 
 Panubo's customised fluentd Docker images.
 
