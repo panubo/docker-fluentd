@@ -1,6 +1,7 @@
 NAME    := panubo/fluentd
 BRANCH  := $(shell git rev-parse --abbrev-ref HEAD 2> /dev/null)
 VERSION := $(shell sed -E -e '/^ENV BUILD_VERSION/!d' -e 's/^ENV BUILD_VERSION (.*)/\1/' Dockerfile)
+VERSION_FULL := $(shell sed -E -e '/^ENV BUILD_VERSION/!d' -e 's/^ENV BUILD_VERSION (.*)/\1/' Dockerfile)-$(shell date -u +%Y%m%d)
 ALTERNATE := $(shell echo $(VERSION) | sed -e 's/[0-9|\.]//g' -e 's/^-//' -e 's/--/-/g' -e 's/-$$//')
 VERSION_MAJOR  := $(shell echo $(VERSION) | sed -e 's/-/./' | cut -d\. -f1)
 VERSION_MINOR  := $(shell echo $(VERSION) | sed -e 's/-/./' | cut -d\. -f2)
@@ -41,5 +42,9 @@ docker-release: ## Builds and pushes docker image
 	docker push docker.io/$(NAME):$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(ALTERNATE)
 	git checkout $(BRANCH)
 
-_ci_test: ## NOOP CI entrypoint
+_ci_test:
 	true
+
+_ci_version:
+	@echo "$(VERSION)"
+	@echo "$(VERSION_FULL)"
