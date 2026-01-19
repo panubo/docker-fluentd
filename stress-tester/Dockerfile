@@ -4,9 +4,9 @@ USER root
 
 # Install gomplate
 RUN set -x \
-  && GOMPLATE_VERSION=v3.11.6 \
-  && GOMPLATE_CHECKSUM_X86_64=7ce8f9f89a0b21fac05b8412af4dd8a06f9e5d8a2df70370549d2dde5f9f0d75 \
-  && GOMPLATE_CHECKSUM_AARCH64=f41b6cfaebd9c744c3091993baf9ca44cd80e07d63143d2e78457a159fc22dc5 \
+  && GOMPLATE_VERSION=v4.3.3 \
+  && GOMPLATE_CHECKSUM_X86_64=ca281666e86f2f09218c1653e1908f572c0e349e9de64cb4ea93ade9333f0596 \
+  && GOMPLATE_CHECKSUM_AARCH64=25bd73720ff470cec0dfaa31ca2c436b30f86142db9af68382ce64e0f3e7b9c5 \
   && BUILD_DEPS='curl' \
   && apt-get update \
   && apt-get install -y --no-install-recommends ${BUILD_DEPS} \
