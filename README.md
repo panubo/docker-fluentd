@@ -6,7 +6,6 @@ Panubo's customised fluentd Docker images.
 
 **Unmaintained**
 
-- [alpine](alpine/README.md) - Based on official optimised Alpine image.
 - [stress-tester](stess-tester) - Fluentd image that continuously outputs log messages for testing logging systems.
 
 ## License
@@ -20,7 +19,6 @@ This includes the following plugins:
 - [Systemd](https://github.com/reevoo/fluent-plugin-systemd)
 - [Amazon S3](https://github.com/fluent/fluent-plugin-s3)
 - [CloudWatch Logs](https://github.com/fluent-plugins-nursery/fluent-plugin-cloudwatch-logs)
-- [Google Cloud Logging](https://github.com/GoogleCloudPlatform/fluent-plugin-google-cloud)
 
 ## Systemd
 

@@ -1,4 +1,4 @@
-FROM fluent/fluentd:v1.14.6-debian-1.1
+FROM fluent/fluentd:v1.19.0-debian-2.1
 
 COPY fluent.conf /fluentd/etc/fluent.conf
 
@@ -17,11 +17,12 @@ RUN set -x \
   && apt-get -y install libsystemd0 \
   && export BUILD_DEPS='ruby-dev gcc g++ make libc-dev libffi-dev' \
   && apt-get install -y --no-install-recommends ${BUILD_DEPS} \
-  && gem install bundler --version 2.0.2 \
-  && bundle install --gemfile=/fluentd/Gemfile --path=/fluentd/vendor/bundle --deployment \
+  && gem install bundler --version 2.1.4 \
+  && bundle install --gemfile=/fluentd/Gemfile \
   && gem sources --clear-all \
   && apt-get --purge autoremove -y ${BUILD_DEPS} \
   && apt-get clean && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/* \
-  && rm -rf /fluentd/vendor/bundle/ruby/2.6.0/cache/* /usr/local/lib/ruby/gems/2.6.0/cache/* /root/.bundle/cache/* \
+  && rm -rf ${GEM_HOME}/cache/* ${GEM_HOME}/cache/* /root/.bundle/cache/* \
   ;
+
 USER fluent
