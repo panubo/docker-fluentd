@@ -8,6 +8,12 @@ Panubo's customised fluentd Docker images.
 - [debian](debian/README.md) - Debian base for Systemd support.
 - [stress-tester](stess-tester) - Fluentd image that continuously outputs log messages for testing logging systems.
 
+<!-- BEGIN_TOP_PANUBO -->
+> [!IMPORTANT]
+> **Maintained by Panubo** — Cloud Native & SRE Consultants in Sydney.
+> [Work with us →](https://panubo.com.au)
+<!-- END_TOP_PANUBO -->
+
 # Fluentd (Debian Base)
 
 This includes the following plugins:
@@ -37,3 +43,20 @@ MIT License Volt Grid Pty Ltd.
 ## Status
 
 Stable and production ready.
+
+<!-- BEGIN_BOTTOM_PANUBO -->
+> [!IMPORTANT]
+> ## About Panubo
+>
+> This project is maintained by Panubo, a technology consultancy based in Sydney, Australia. We build reliable, scalable systems and help teams master the cloud-native ecosystem.
+>
+> We are available for hire to help with:
+>
+> * SRE & Operations: Improving system reliability and incident response.
+> * Platform Engineering: Building internal developer platforms that scale.
+> * Kubernetes: Cluster design, security auditing, and migrations.
+> * DevOps: Streamlining CI/CD pipelines and developer experience.
+> * [See our other services](https://panubo.com.au/services)
+>
+> Need a hand with your infrastructure? [Let’s have a chat](https://panubo.com.au/contact) or email us at team@panubo.com.
+<!-- END_BOTTOM_PANUBO -->
